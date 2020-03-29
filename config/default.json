@@ -1,0 +1,9 @@
+{
+  "app": {
+    "PORT": 4010,
+    "LOG_LEVEL": "info"
+  },
+  "db": {
+    "DB_URI": "mongodb://localhost:27017/typing_test"
+  }
+}

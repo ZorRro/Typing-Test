@@ -1,0 +1,13 @@
+
+# Configuration Files
+.vscode
+
+
+# Node packages
+node_modules/*
+*/node_modules
+.env
+
+
+# Log files
+*log
