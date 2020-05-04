@@ -10,3 +10,15 @@
 .blur {
   opacity: 0.4;
 }
+
+.incorrect {
+  color: "tomato";
+}
+
+.skipped {
+  color: "gray";
+}
+
+.correct {
+  color: "black";
+}

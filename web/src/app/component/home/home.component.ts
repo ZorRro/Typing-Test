@@ -7,7 +7,7 @@ import { ContentService } from "src/app/service/content.service";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-  constructor(private contentService: ContentService) {}
+  constructor(private contentService: ContentService) { }
   tests: any;
   ngOnInit() {
     this.getAllContents();
@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   getAllContents() {
     this.contentService.getAllContents().subscribe((result) => {
       this.tests = result;
-      console.log(result);
     });
   }
 }

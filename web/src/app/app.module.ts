@@ -13,6 +13,7 @@ import { AppDescriptionComponent } from "./component/app-description/app-descrip
 import { TypingTestThumbnailComponent } from "./component/typing-test-thumbnail/typing-test-thumbnail.component";
 import { DispatcherService } from "./service/dispatcher.service";
 import { HomeComponent } from './component/home/home.component';
+import { TypeActionDirective } from './directive/type-action.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HomeComponent } from './component/home/home.component';
     AppDescriptionComponent,
     TypingTestThumbnailComponent,
     HomeComponent,
+    TypeActionDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, RouterModule],
   providers: [
@@ -34,4 +36,4 @@ import { HomeComponent } from './component/home/home.component';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
