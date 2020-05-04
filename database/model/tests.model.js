@@ -1,6 +1,6 @@
 const { Schema } = require("mongoose");
 
-const ContentSchema = new Schema(
+const TestSchema = new Schema(
   {
     title: {
       type: String,
@@ -34,4 +34,4 @@ const ContentSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = ContentSchema;
+module.exports = TestSchema;

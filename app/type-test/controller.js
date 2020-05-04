@@ -1,6 +1,7 @@
 const { TestModel } = require("../../database/connection");
 const HTTP_STATUS = require("http-status-codes");
 const Logger = require("../../util/logger");
+const { ValidationResult } = require("express-validator");
 
 module.exports.allTest = async (req, res, next) => {
   try {
@@ -15,6 +16,11 @@ module.exports.allTest = async (req, res, next) => {
 };
 
 module.exports.retrieveTest = async (req, res, next) => {
+  let validationError = ValidationResult(req);
+  if (validationError) {
+    return next(validationError);
+  }
+
   const testId = req.params.id;
   try {
     const test = await TestModel.findOne({ _id: testId });

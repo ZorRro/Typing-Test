@@ -1,13 +1,17 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { DispatcherService } from "./dispatcher.service";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class ContentService {
-  constructor(private http: HttpClient) {}
+  constructor(private dataDispatcher: DispatcherService) {}
+
+  getContent(testId: any) {
+    return this.dataDispatcher.getTestContent(testId);
+  }
 
   public getAllContents() {
-    return this.http.get("/api/all-test");
+    return this.dataDispatcher.getAllTestContent();
   }
 }

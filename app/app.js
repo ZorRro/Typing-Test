@@ -6,7 +6,7 @@ const config = require("config");
 const morgan = require("morgan");
 const Logger = require("../util/logger.js");
 const TestRoutes = require("./type-test/routes");
-const AuthRoutes = require("./auth/routes");
+const AdminRoutes = require("./admin/routes");
 
 const app = express();
 const PORT = config.get("app.PORT");
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, "../public/")));
 
 // Routes
 app.use("/api", TestRoutes);
-app.use("/auth", AuthRoutes);
+app.use("/admin", AdminRoutes);
 app.get("/", (req, res, next) => {
   res.sendStatus(OK);
 });
@@ -34,6 +34,7 @@ app.use("*", (req, res) => {
 });
 app.use((err, req, res, next) => {
   Logger.info("Responding from error handler");
+  Logger.error(err);
   return res.status(INTERNAL_SERVER_ERROR).send();
 });
 

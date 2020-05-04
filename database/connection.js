@@ -1,6 +1,6 @@
 const config = require("config");
 const mongoose = require("mongoose");
-const ContentSchema = require("./model/tests.model");
+const TestSchema = require("./model/tests.model");
 const Logger = require("../util/logger");
 
 const connection = mongoose.connection;
@@ -45,7 +45,7 @@ let connectToDB = async MONGO_URI => {
 
 connectToDB(config.get("db.DB_URI"));
 
-const TestModel = mongoose.model("test", ContentSchema);
+const TestModel = mongoose.model("test", TestSchema);
 
 module.exports = {
   TestModel: TestModel
