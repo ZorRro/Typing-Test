@@ -6,7 +6,7 @@
     <div class="card-body">
       <h5 class="card-title">{{ test.description }}</h5>
       <p
-        class="card-text text-justify"
+        class="card-text text-justify typing-content"
         [innerHTML]="sanitize(outputContent)"
         typeAction
         (keyup)="reRenderContent($event)"

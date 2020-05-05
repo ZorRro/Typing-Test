@@ -11,14 +11,13 @@
   opacity: 0.4;
 }
 
-.incorrect {
-  color: "tomato";
+.typing-content {
+  padding: 10px 10px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  line-height: 1.5 rem;
 }
 
-.skipped {
-  color: "gray";
-}
-
-.correct {
-  color: "black";
+.typing-content:focus {
+  border: 0;
 }
